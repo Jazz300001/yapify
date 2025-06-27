@@ -1,7 +1,6 @@
 from asyncio import tasks
 from datetime import time
 import discord
-import tweepy
 from discord.ext import commands, tasks
 import logging
 import random
