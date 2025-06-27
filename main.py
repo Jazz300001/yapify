@@ -51,9 +51,9 @@ async def on_ready():
         print(f"Sync failed: {e}")
     ytcheck.start()
 
+lastvids = {}
 @tasks.loop(minutes=10)
 async def ytcheck():
-    lastvids = {}
     for rss in allrss:
         feed = feedparser.parse(rss)
         recent = feed.entries[0]
@@ -64,7 +64,7 @@ async def ytcheck():
             await channel.send(f"peep da vid-- {recent.title}\n{recent.link}")
         else:
             channel = bot.get_channel(discchannel)
-            channel.send("nothing new yet")
+            await channel.send("nothing new yet")
 
 @bot.event
 async def on_member_join(member):
