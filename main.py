@@ -14,8 +14,6 @@ import praw
 import feedparser
 import asyncio
 from keep_alive import keep_alive
-keep_alive()
-
 load_dotenv()
 token  = os.getenv('DISCORD_TOKEN')
 RED_ID = os.getenv('RED_ID')
