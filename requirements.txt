@@ -1,10 +1,7 @@
 discord.py
 python-dotenv
-asyncio
-datetime
-random
 requests
 aiohttp
-json
 praw
 feedparser
+flask
