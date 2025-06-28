@@ -15,6 +15,7 @@ import feedparser
 import asyncio
 from keep_alive import keep_alive
 load_dotenv()
+discchannel = os.getenv('DISCCHAN')
 token  = os.getenv('DISCORD_TOKEN')
 RED_ID = os.getenv('RED_ID')
 RED_SECRET = os.getenv('RED_SECRET')
@@ -27,7 +28,6 @@ for i in range(len(ytchannelids)):
     rss = f"https://www.youtube.com/feeds/videos.xml?channel_id={id}"
     allrss.append(rss)
 print(allrss)
-discchannel = 376203676215148546
 
 from discord.ext import commands
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
