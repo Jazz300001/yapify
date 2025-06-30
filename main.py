@@ -131,14 +131,6 @@ async def bother(interaction: discord.Interaction, user: discord.User):
         await interaction.response.send_message("dm forbidden bro think he mysterious", ephemeral=True)
 
 
-
-
-
-@bot.tree.command()
-async def racist(interaction: discord.Interaction):
-    gif_url = "https://cdn.discordapp.com/attachments/1202760576300879964/1379988483707502602/IMG_6057.png?ex=684e1b6d&is=684cc9ed&hm=996d7a5c20dd75642087b455863f35a8134c00b6b88001e57c40a4964296fdd8&"
-    await interaction.response.send_message(gif_url)
-
 @bot.tree.command()
 async def pinned(interaction: discord.Interaction):
     pins = await interaction.channel.pins()
